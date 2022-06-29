@@ -1,6 +1,9 @@
 # backvenom
 multi-purpose Red Team Assessment access and exploitation framework for exploitation C2, backdooring and defense mechanism evasion purposes on restricted enviroments
 
+# State
+This project is at an early stage of development. Please feel free to contact me for collaboration.
+
 # Features
 - **modular**: each malware is generated with a (simple) python3 module, similar to msfconsole, which in turn, contains the handler, where the connections of the received agents will automatically arrive.
 - **Dockerized**: Easy to use! Deploy server/ in any VPS, access from any device or situation!
@@ -8,9 +11,6 @@ multi-purpose Red Team Assessment access and exploitation framework for exploita
 - **Multiple Listeners**: DNS, ICMP...
 - **Multiple Clients**: API, CLI, GUI, Telegram...
 
-
-# State
-This project is at an early stage of development. Please feel free to contact me for collaboration.
 
 # Malware Module structure
 1. _MalwareHandler(ABC)_
