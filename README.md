@@ -13,9 +13,9 @@ multi-purpose Red Team Assessment access and exploitation framework for exploita
 This project is at an early stage of development. Please feel free to contact me for collaboration.
 
 # Malware Module structure
-1. MalwareHandler(ABC)
+1. _MalwareHandler(ABC)_
   - Handle a client connection given socket writer/reader
-2. MalwareGenerator(ABC)
+2. _MalwareGenerator(ABC)_
   -  This class generate malware and returns binary w/ given options
         
  ![image](https://user-images.githubusercontent.com/41192980/176485365-699a4ba2-1877-4b8e-8bbd-c5ffdc43d160.png)
