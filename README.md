@@ -19,13 +19,12 @@ This project is at an early stage of development. Please feel free to contact me
   -  This class generate malware and returns binary w/ given options
  
  # linux/test example module
- ``
- search test
- use linux/test
- show options
- set rhost ...
- set lhost ...
- generate
-  ``
+  ``search test ``
+  ``use linux/test ``
+  ``show options ``
+ `` set rhost ... ``
+  ``set lhost ... ``
+  ``generate ``
+ 
  ![image](https://user-images.githubusercontent.com/41192980/176485365-699a4ba2-1877-4b8e-8bbd-c5ffdc43d160.png)
  
