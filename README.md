@@ -13,7 +13,8 @@ multi-purpose Red Team Assessment access and exploitation framework for exploita
 This project is at an early stage of development. Please feel free to contact me for collaboration.
 
 # Malware Module class example
-```class MalwareHandler(ABC):
+
+``` class MalwareHandler(ABC):
     """
     Handle a client connection given socket writer/reader
     """
@@ -42,5 +43,6 @@ class MalwareGenerator(ABC):
     def generate(self) -> bytes:
         """
         Return: malware in byte form ( binary )
-        """```
+        """ ```
+
 ![image](https://user-images.githubusercontent.com/41192980/176485365-699a4ba2-1877-4b8e-8bbd-c5ffdc43d160.png)
