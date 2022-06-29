@@ -1,0 +1,64 @@
+{
+  "version": "7.17.0",
+  "objects": [
+    {
+      "id": "ba65d4d0-b389-11ec-a1ce-1f4f492ed42b",
+      "type": "dashboard",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2022-04-03T20:07:46.077Z",
+      "version": "WzgwMCwzNl0=",
+      "attributes": {
+        "title": "backvenom",
+        "hits": 0,
+        "description": "",
+        "panelsJSON": "[{\"version\":\"7.17.0\",\"type\":\"lens\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"c73d1b73-f29c-46a3-9370-a62cd3c46158\"},\"panelIndex\":\"c73d1b73-f29c-46a3-9370-a62cd3c46158\",\"embeddableConfig\":{\"attributes\":{\"title\":\"\",\"visualizationType\":\"lnsXY\",\"type\":\"lens\",\"references\":[{\"type\":\"index-pattern\",\"id\":\"2d23dfe0-b389-11ec-b150-415203251eb2\",\"name\":\"indexpattern-datasource-current-indexpattern\"},{\"type\":\"index-pattern\",\"id\":\"2d23dfe0-b389-11ec-b150-415203251eb2\",\"name\":\"indexpattern-datasource-layer-11169cfd-4814-4168-a704-e527c7441dff\"}],\"state\":{\"visualization\":{\"legend\":{\"isVisible\":true,\"position\":\"right\"},\"valueLabels\":\"hide\",\"fittingFunction\":\"None\",\"yLeftExtent\":{\"mode\":\"full\"},\"yRightExtent\":{\"mode\":\"full\"},\"axisTitlesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"tickLabelsVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"labelsOrientation\":{\"x\":0,\"yLeft\":0,\"yRight\":0},\"gridlinesVisibilitySettings\":{\"x\":true,\"yLeft\":true,\"yRight\":true},\"preferredSeriesType\":\"bar_stacked\",\"layers\":[{\"layerId\":\"11169cfd-4814-4168-a704-e527c7441dff\",\"accessors\":[\"9e0e77a0-d06b-44b8-ab90-0a7026d896a1\"],\"position\":\"top\",\"seriesType\":\"bar_stacked\",\"showGridlines\":false,\"layerType\":\"data\",\"xAccessor\":\"780f43e3-fe9b-4d45-9769-87ce698d7080\"}]},\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filters\":[],\"datasourceStates\":{\"indexpattern\":{\"layers\":{\"11169cfd-4814-4168-a704-e527c7441dff\":{\"columns\":{\"780f43e3-fe9b-4d45-9769-87ce698d7080\":{\"label\":\"Top values of lhost.keyword\",\"dataType\":\"string\",\"operationType\":\"terms\",\"scale\":\"ordinal\",\"sourceField\":\"lhost.keyword\",\"isBucketed\":true,\"params\":{\"size\":5,\"orderBy\":{\"type\":\"column\",\"columnId\":\"9e0e77a0-d06b-44b8-ab90-0a7026d896a1\"},\"orderDirection\":\"desc\",\"otherBucket\":true,\"missingBucket\":false}},\"9e0e77a0-d06b-44b8-ab90-0a7026d896a1\":{\"label\":\"Count of records\",\"dataType\":\"number\",\"operationType\":\"count\",\"isBucketed\":false,\"scale\":\"ratio\",\"sourceField\":\"Records\"}},\"columnOrder\":[\"780f43e3-fe9b-4d45-9769-87ce698d7080\",\"9e0e77a0-d06b-44b8-ab90-0a7026d896a1\"],\"incompleteColumns\":{}}}}}}},\"enhancements\":{}}}]",
+        "optionsJSON": "{\"useMargins\":true,\"syncColors\":false,\"hidePanelTitles\":false}",
+        "version": 1,
+        "timeRestore": false,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "type": "index-pattern",
+          "id": "2d23dfe0-b389-11ec-b150-415203251eb2",
+          "name": "c73d1b73-f29c-46a3-9370-a62cd3c46158:indexpattern-datasource-current-indexpattern"
+        },
+        {
+          "type": "index-pattern",
+          "id": "2d23dfe0-b389-11ec-b150-415203251eb2",
+          "name": "c73d1b73-f29c-46a3-9370-a62cd3c46158:indexpattern-datasource-layer-11169cfd-4814-4168-a704-e527c7441dff"
+        }
+      ],
+      "migrationVersion": {
+        "dashboard": "7.17.0"
+      },
+      "coreMigrationVersion": "7.17.0"
+    },
+    {
+      "id": "2d23dfe0-b389-11ec-b150-415203251eb2",
+      "type": "index-pattern",
+      "namespaces": [
+        "default"
+      ],
+      "updated_at": "2022-04-03T20:03:49.086Z",
+      "version": "Wzc3MSwzNl0=",
+      "attributes": {
+        "fieldAttrs": "{}",
+        "title": "*",
+        "timeFieldName": "@timestamp",
+        "fields": "[]",
+        "typeMeta": "{}",
+        "runtimeFieldMap": "{}"
+      },
+      "references": [],
+      "migrationVersion": {
+        "index-pattern": "7.11.0"
+      },
+      "coreMigrationVersion": "7.17.0"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+version: "3.9"
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:$ELASTIC_VERSION
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+      - ELASTIC_PASSWORD=$ELASTIC_PASSWORD
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 443:443
+      - 9200:9200
+
+  backvenom_server:
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ELASTICSEARCH_PASSWORD=$ELASTIC_PASSWORD
+      - BACKVENOM_PASSWORD=$BACKVENOM_PASSWORD
+    build: .
+    entrypoint: bash venomsrc/ssl/gen_selfsigned.sh
+    restart: always
+    network_mode: host
+    volumes:
+      - ./logs:/home/backvenom/logs
+      - ./venomsrc/ssl:/home/backvenom/venomsrc/ssl
+      - ${PWD}/.env:/home/backvenom/.env
+    depends_on:
+      - elasticsearch
+
+  api:
+    build: .
+    command: python venomsrc/endpoints/api/api_server.py
+    restart: always
+    network_mode: host
+    environment:
+      - ELASTICSEARCH_PASSWORD=$ELASTIC_PASSWORD
+      - BACKVENOM_PASSWORD=$BACKVENOM_PASSWORD
+    volumes:
+      - ./logs:/home/backvenom/logs
+    depends_on:
+      - elasticsearch
+      - backvenom_server
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:$ELASTIC_VERSION
+    environment:
+      - ELASTICSEARCH_USERNAME=elastic
+      - ELASTICSEARCH_PASSWORD=$ELASTIC_PASSWORD
+      - SERVER_SSL_ENABLED=true
+      - SERVER_SSL_CERTIFICATE=/usr/share/kibana/ssl/venom.crt
+      - SERVER_SSL_KEY=/usr/share/kibana/ssl/private.key
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./venomsrc/ssl:/usr/share/kibana/ssl
+    ports:
+      - 5601:5601
