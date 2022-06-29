@@ -6,10 +6,8 @@ multi-purpose Red Team Assessment access and exploitation framework for exploita
 - **Dockerized**: Easy to use! Deploy server/ in any VPS, access from any device or situation!
 - **Elasticsearch + Kibana**: the output of the commands executed in broadcast will be stored in the database in order to be able to analyze them or to have a holistic view on the indexed agents due to kibana, in addition, backvenom will check at each restart if it has to execute any listener indexed in the BBDD
 - **Multiple Listeners**: DNS, ICMP...
-- **Multiple Clients**
-- 
+- **Multiple Clients**: API, CLI, GUI, Telegram...
 
-Elasticsearch database with Kibana dashboard visualization + raw console with AES cipher conn + REST API + Scalable + Windows GUI Client + Multiple listeners ( TCP, ICMP ) + Listener persistence due to DDBB +Botnet control + [.
 
 # State
 This project is at an early stage of development. Please feel free to contact me for collaboration.
